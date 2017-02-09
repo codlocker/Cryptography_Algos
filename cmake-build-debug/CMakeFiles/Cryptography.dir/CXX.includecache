@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shuttle3468/CLionProjects/Cryptography/TransCipher.cpp
+iostream
+-
+bits/stdc++.h
+-
+
+/home/shuttle3468/CLionProjects/Cryptography/main.cpp
+iostream
+-
+string
+-
+
+/home/shuttle3468/CLionProjects/Cryptography/routecipher.cpp
+iostream
+-
+bits/stdc++.h
+-
+
