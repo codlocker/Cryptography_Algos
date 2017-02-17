@@ -1,0 +1,115 @@
+\hypertarget{TransCipher_8cpp}{}\section{Trans\+Cipher.\+cpp File Reference}
+\label{TransCipher_8cpp}\index{Trans\+Cipher.\+cpp@{Trans\+Cipher.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\\*
+Include dependency graph for Trans\+Cipher.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{TransCipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{ull}~unsigned long long
+\item 
+\#define \hyperlink{TransCipher_8cpp_a276c5a0e984cf60015b27252fe04fe6b}{pb}~push\+\_\+back
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{TransCipher_8cpp_a2f550a8a7761a39b36fbb6ccd904fc8d}{fill\+Blanks} (string s, \hyperlink{TransCipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{ull} l)
+\item 
+int \hyperlink{TransCipher_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Trans\+Cipher.\+cpp@{Trans\+Cipher.\+cpp}!pb@{pb}}
+\index{pb@{pb}!Trans\+Cipher.\+cpp@{Trans\+Cipher.\+cpp}}
+\subsubsection[{\texorpdfstring{pb}{pb}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pb~push\+\_\+back}\hypertarget{TransCipher_8cpp_a276c5a0e984cf60015b27252fe04fe6b}{}\label{TransCipher_8cpp_a276c5a0e984cf60015b27252fe04fe6b}
+\index{Trans\+Cipher.\+cpp@{Trans\+Cipher.\+cpp}!ull@{ull}}
+\index{ull@{ull}!Trans\+Cipher.\+cpp@{Trans\+Cipher.\+cpp}}
+\subsubsection[{\texorpdfstring{ull}{ull}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ull~unsigned long long}\hypertarget{TransCipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{}\label{TransCipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}
+
+
+\subsection{Function Documentation}
+\index{Trans\+Cipher.\+cpp@{Trans\+Cipher.\+cpp}!fill\+Blanks@{fill\+Blanks}}
+\index{fill\+Blanks@{fill\+Blanks}!Trans\+Cipher.\+cpp@{Trans\+Cipher.\+cpp}}
+\subsubsection[{\texorpdfstring{fill\+Blanks(string s, ull l)}{fillBlanks(string s, ull l)}}]{\setlength{\rightskip}{0pt plus 5cm}string fill\+Blanks (
+\begin{DoxyParamCaption}
+\item[{string}]{s, }
+\item[{{\bf ull}}]{l}
+\end{DoxyParamCaption}
+)}\hypertarget{TransCipher_8cpp_a2f550a8a7761a39b36fbb6ccd904fc8d}{}\label{TransCipher_8cpp_a2f550a8a7761a39b36fbb6ccd904fc8d}
+
+\begin{DoxyCode}
+9                                    \{
+10     \textcolor{keywordflow}{if}(s.size() < l) \{
+11         \textcolor{keywordflow}{while}(s.size() != l) \{
+12             s += \textcolor{stringliteral}{"!"};
+13         \}
+14     \}
+15     \textcolor{keywordflow}{return} s;
+16 \}
+\end{DoxyCode}
+\index{Trans\+Cipher.\+cpp@{Trans\+Cipher.\+cpp}!main@{main}}
+\index{main@{main}!Trans\+Cipher.\+cpp@{Trans\+Cipher.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{TransCipher_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{TransCipher_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+17            \{
+18     cout << \textcolor{stringliteral}{"IMPLEMENTATION OF TRANSPOSITION CIPHER USING COLUMNAR TRANPOSITION"} <<endl;
+19     \textcolor{keywordtype}{string} key, str;
+20     vector<string> message;
+21     vector<string> enc\_message;
+22     \hyperlink{TransCipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{ull} i,j,len,key\_len, order\_size;
+23     cin >> key;
+24     key\_len = key.size();
+25     \textcolor{keywordtype}{string}  temp\_key = key;
+26     getline(cin,str);
+27     \textcolor{keywordflow}{while}(getline(cin, str))\{
+28         \textcolor{keywordflow}{if}(str.empty())\{\textcolor{keywordflow}{break};\}
+29         message.pb(str);
+30     \}
+31     \textcolor{keywordtype}{double} time\_taken = clock();
+32 
+33     len = message.size();
+34     enc\_message = message;
+35     message[len - 1] = \hyperlink{TransCipher_8cpp_a2f550a8a7761a39b36fbb6ccd904fc8d}{fillBlanks}(message[len - 1], key\_len);
+36     \textcolor{keywordflow}{for}(i=0;i<len;i++) \{
+37         cout << message[i] <<endl;
+38     \}
+39     \textcolor{comment}{/* Forming the key*/}
+40     vector<ull> ordered, unordered;
+41     sort(temp\_key.begin(), temp\_key.end());
+42     \textcolor{keywordflow}{for}(i=0;i<key\_len;i++) \{
+43         ordered.pb(i+1);
+44     \}
+45     order\_size = ordered.size();
+46     \textcolor{keywordflow}{for}(i=0;i<order\_size;i++) \{
+47         \textcolor{keywordflow}{for}(j = 0;j<order\_size;j++) \{
+48             \textcolor{keywordflow}{if}(temp\_key[j] == key[i]) \{
+49                 \textcolor{comment}{//cout << temp\_key[j] << " Matched " << key[i]<<endl;}
+50                 unordered.pb(j+1);
+51                 \textcolor{keywordflow}{break};
+52             \}
+53         \}
+54     \}
+55     \textcolor{comment}{/* Forming the encrypted message*/}
+56     \textcolor{keywordflow}{for}(i=0;i<key\_len;i++) \{
+57         \textcolor{keywordflow}{for}(j=0;j<len;j++) \{
+58             enc\_message[j][unordered[i] - 1] = message[j][ordered[i]-1];
+59         \}
+60     \}
+61     \textcolor{keywordflow}{for}(i=0;i<key\_len;i++) \{
+62         \textcolor{keywordflow}{for}(j=0;j<len;j++) \{
+63             cout<< enc\_message[j][i];
+64         \}
+65         cout << \textcolor{stringliteral}{" "};
+66     \}
+67     cout << endl;
+68     time\_taken = (clock() - time\_taken)/CLOCKS\_PER\_SEC;
+69     cout << time\_taken <<endl;
+70     \textcolor{keywordflow}{return} 0;
+71 \}\end{DoxyCode}

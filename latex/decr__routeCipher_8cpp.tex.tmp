@@ -1,0 +1,90 @@
+\hypertarget{decr__routeCipher_8cpp}{}\section{decr\+\_\+route\+Cipher.\+cpp File Reference}
+\label{decr__routeCipher_8cpp}\index{decr\+\_\+route\+Cipher.\+cpp@{decr\+\_\+route\+Cipher.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\\*
+Include dependency graph for decr\+\_\+route\+Cipher.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{decr__routeCipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{ull}~unsigned long long
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{decr__routeCipher_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{decr\+\_\+route\+Cipher.\+cpp@{decr\+\_\+route\+Cipher.\+cpp}!ull@{ull}}
+\index{ull@{ull}!decr\+\_\+route\+Cipher.\+cpp@{decr\+\_\+route\+Cipher.\+cpp}}
+\subsubsection[{\texorpdfstring{ull}{ull}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ull~unsigned long long}\hypertarget{decr__routeCipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{}\label{decr__routeCipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}
+
+
+\subsection{Function Documentation}
+\index{decr\+\_\+route\+Cipher.\+cpp@{decr\+\_\+route\+Cipher.\+cpp}!main@{main}}
+\index{main@{main}!decr\+\_\+route\+Cipher.\+cpp@{decr\+\_\+route\+Cipher.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{decr__routeCipher_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{decr__routeCipher_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+8            \{
+9     \textcolor{keywordtype}{string} enc\_message = \textcolor{stringliteral}{""}, str;
+10     \hyperlink{decr__routeCipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{ull} len ,i ,j ,k ,l, row, col;
+11     \textcolor{keywordtype}{string} enc\_matrix[100];
+12     i=0;
+13     getline(cin,str);
+14     istringstream istream(str);
+15     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{string} s; istream >> s;) \{
+16         enc\_matrix[i] = s;
+17         i++;
+18     \}
+19     row = i;
+20     col = enc\_matrix[0].size();
+21     \textcolor{comment}{//cout << row << " " << col <<endl;}
+22     pair<ull,ull> dim = make\_pair(row,col);
+23     \hyperlink{decr__routeCipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{ull} c\_count = 0, max\_r = dim.first-1, min\_c = 0, min\_r = 0, max\_c = dim.second-1;
+24     len = row * col;
+25     \textcolor{comment}{//cout << min\_r <<" " << max\_r <<" " << min\_c << " " << max\_c <<endl;}
+26     \textcolor{keywordflow}{while}(c\_count < len) \{
+27         \textcolor{keywordflow}{for}(i = min\_r; i <= max\_r;++i) \{
+28             \textcolor{keywordflow}{if}(c\_count == len) \{\textcolor{keywordflow}{break};\}
+29             enc\_message+= enc\_matrix[i][max\_c];
+30             c\_count ++;
+31         \}
+32 
+33         \textcolor{comment}{//cout << c\_count << endl;}
+34         \textcolor{keywordflow}{for}(j = max\_c-1;j>=min\_c;--j) \{
+35             \textcolor{keywordflow}{if}(c\_count == len) \{\textcolor{keywordflow}{break};\}
+36             enc\_message+= enc\_matrix[max\_r][j];
+37             ++c\_count;
+38             \textcolor{keywordflow}{if}(j == min\_c)\{ \textcolor{keywordflow}{break};\}
+39 
+40         \}
+41         \textcolor{comment}{//cout << c\_count << endl;}
+42         \textcolor{keywordflow}{for}(k = max\_r-1;k>=min\_r;--k) \{
+43             \textcolor{keywordflow}{if}(c\_count == len) \{\textcolor{keywordflow}{break};\}
+44             enc\_message+= enc\_matrix[k][min\_c];
+45             ++c\_count;
+46             \textcolor{keywordflow}{if}(k == min\_r)\{ \textcolor{keywordflow}{break};\}
+47         \}
+48         \textcolor{comment}{//cout << c\_count << endl;}
+49         \textcolor{keywordflow}{for}(l = min\_c + 1;l<=max\_c -1;++l) \{
+50             \textcolor{keywordflow}{if}(c\_count == len) \{\textcolor{keywordflow}{break};\}
+51             enc\_message+= enc\_matrix[min\_r][l];
+52             c\_count ++;
+53         \}
+54         \textcolor{comment}{//cout << c\_count << endl;}
+55         ++min\_c;
+56         ++min\_r;
+57         --max\_r;
+58         --max\_c;
+59     \}
+60     cout << enc\_message <<endl;
+61     \textcolor{keywordflow}{return} 0;
+62 \}
+\end{DoxyCode}

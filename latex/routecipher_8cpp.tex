@@ -1,0 +1,112 @@
+\hypertarget{routecipher_8cpp}{}\section{routecipher.\+cpp File Reference}
+\label{routecipher_8cpp}\index{routecipher.\+cpp@{routecipher.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\\*
+Include dependency graph for routecipher.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{routecipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{ull}~unsigned long long
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+pair$<$ \hyperlink{TransCipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{ull}, \hyperlink{TransCipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{ull} $>$ \hyperlink{routecipher_8cpp_afdda62334847942d60743cdc30ba58e7}{get\+RC} (\hyperlink{TransCipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{ull} len)
+\item 
+int \hyperlink{routecipher_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{routecipher.\+cpp@{routecipher.\+cpp}!ull@{ull}}
+\index{ull@{ull}!routecipher.\+cpp@{routecipher.\+cpp}}
+\subsubsection[{\texorpdfstring{ull}{ull}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ull~unsigned long long}\hypertarget{routecipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{}\label{routecipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}
+
+
+\subsection{Function Documentation}
+\index{routecipher.\+cpp@{routecipher.\+cpp}!get\+RC@{get\+RC}}
+\index{get\+RC@{get\+RC}!routecipher.\+cpp@{routecipher.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+R\+C(ull len)}{getRC(ull len)}}]{\setlength{\rightskip}{0pt plus 5cm}pair$<${\bf ull},{\bf ull}$>$ get\+RC (
+\begin{DoxyParamCaption}
+\item[{{\bf ull}}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{routecipher_8cpp_afdda62334847942d60743cdc30ba58e7}{}\label{routecipher_8cpp_afdda62334847942d60743cdc30ba58e7}
+
+\begin{DoxyCode}
+8                              \{
+9     \hyperlink{routecipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{ull} i;
+10     pair<ull,ull> dim;
+11     \textcolor{keywordflow}{for}(i=2;i<=len; i++) \{
+12         \textcolor{keywordflow}{if}(len % i == 0) \{
+13             dim.first = i;
+14             dim.second = len/i;
+15             \textcolor{keywordflow}{return} dim;
+16         \}
+17     \}
+18     \textcolor{keywordflow}{return} dim;
+19 \}
+\end{DoxyCode}
+\index{routecipher.\+cpp@{routecipher.\+cpp}!main@{main}}
+\index{main@{main}!routecipher.\+cpp@{routecipher.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{routecipher_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{routecipher_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+20            \{
+21     \textcolor{keywordtype}{string} enc\_message;
+22     cin >> enc\_message;
+23     cout << enc\_message.size() <<endl;
+24     \hyperlink{routecipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{ull} len = enc\_message.size() ,i ,j ,k ,l;
+25     pair<ull,ull> dim = \hyperlink{routecipher_8cpp_afdda62334847942d60743cdc30ba58e7}{getRC}(len);
+26     cout << dim.first <<\textcolor{stringliteral}{" "} << dim.second <<endl;
+27     \textcolor{keywordtype}{char} enc\_matrix[dim.first][dim.second];
+28 
+29     \hyperlink{routecipher_8cpp_a2a1803d02747e2d698a94307ffd6699b}{ull} c\_count = 0, max\_r = dim.first-1, min\_c = 0, min\_r = 0, max\_c = dim.second-1;
+30     \textcolor{comment}{//cout << min\_r <<" " << max\_r <<" " << min\_c << " " << max\_c <<endl;}
+31     \textcolor{keywordflow}{while}(c\_count < len) \{
+32         \textcolor{keywordflow}{for}(i = min\_r; i <= max\_r;++i) \{
+33             \textcolor{keywordflow}{if}(c\_count == len) \{\textcolor{keywordflow}{break};\}
+34             enc\_matrix[i][max\_c] = (enc\_message[c\_count]);
+35             c\_count ++;
+36         \}
+37 
+38         \textcolor{comment}{//cout << c\_count << endl;}
+39         \textcolor{keywordflow}{for}(j = max\_c-1;j>=min\_c;--j) \{
+40             \textcolor{keywordflow}{if}(c\_count == len) \{\textcolor{keywordflow}{break};\}
+41             enc\_matrix[max\_r][j] = (enc\_message[c\_count]);
+42             ++c\_count;
+43             \textcolor{keywordflow}{if}(j == min\_c)\{ \textcolor{keywordflow}{break};\}
+44 
+45         \}
+46         \textcolor{comment}{//cout << c\_count << endl;}
+47         \textcolor{keywordflow}{for}(k = max\_r-1;k>=min\_r;--k) \{
+48             \textcolor{keywordflow}{if}(c\_count == len) \{\textcolor{keywordflow}{break};\}
+49             enc\_matrix[k][min\_c] = (enc\_message[c\_count]);
+50             ++c\_count;
+51             \textcolor{keywordflow}{if}(k == min\_r)\{ \textcolor{keywordflow}{break};\}
+52         \}
+53         \textcolor{comment}{//cout << c\_count << endl;}
+54         \textcolor{keywordflow}{for}(l = min\_c + 1;l<=max\_c -1;++l) \{
+55             \textcolor{keywordflow}{if}(c\_count == len) \{\textcolor{keywordflow}{break};\}
+56             enc\_matrix[min\_r][l] = (enc\_message[c\_count]);
+57             c\_count ++;
+58         \}
+59         cout << c\_count << endl;
+60         ++min\_c;
+61         ++min\_r;
+62         --max\_r;
+63         --max\_c;
+64     \}
+65     \textcolor{keywordflow}{for}(i=0;i<dim.first;i++) \{
+66         \textcolor{keywordflow}{for}(j=0;j<dim.second;j++)
+67             cout << enc\_matrix[i][j];
+68         cout << \textcolor{stringliteral}{" "};
+69     \}
+70     cout <<endl;
+71     \textcolor{keywordflow}{return} 0;
+72 \}
+\end{DoxyCode}
