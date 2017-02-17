@@ -1,27 +1,26 @@
 //
 // Created by shuttle3468 on 4/2/17.
 //
-//
-// Created by shuttle3468 on 4/2/17.
-//
 #include <iostream>
 #include<bits/stdc++.h>
 using namespace std;
 #define ull unsigned long long
 int main() {
-    string enc_message = "";
-
+    string enc_message = "", str;
     ull len ,i ,j ,k ,l, row, col;
-    cin >> row >> col;
-    pair<ull,ull> dim = make_pair(row, col);
-
-    //cout << dim.first <<" " << dim.second <<endl;
-    string enc_matrix[dim.first];
-    ull c_count = 0, max_r = dim.first-1, min_c = 0, min_r = 0, max_c = dim.second-1;
-
-    for(i=0;i<dim.first;i++) {
-        cin >> enc_matrix[i];
+    string enc_matrix[100];
+    i=0;
+    getline(cin,str);
+    istringstream istream(str);
+    for(string s; istream >> s;) {
+        enc_matrix[i] = s;
+        i++;
     }
+    row = i;
+    col = enc_matrix[0].size();
+    //cout << row << " " << col <<endl;
+    pair<ull,ull> dim = make_pair(row,col);
+    ull c_count = 0, max_r = dim.first-1, min_c = 0, min_r = 0, max_c = dim.second-1;
     len = row * col;
     //cout << min_r <<" " << max_r <<" " << min_c << " " << max_c <<endl;
     while(c_count < len) {
