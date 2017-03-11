@@ -73,12 +73,12 @@ If the the digrams are located in the same colum and different row then we swap 
 19     \}
 20     \textcolor{comment}{/*Adhering the conditions for swapping values*/}
 22 
-26     \textcolor{keywordflow}{if}(p[0].first != p[1].first && p[0].second != p[1].second) \{
+26     \textcolor{keywordflow}{if}(p[0].\hyperlink{namespaceDESKeygen_a275c92bf74886b149e31075ed4f24871}{first} != p[1].\hyperlink{namespaceDESKeygen_a275c92bf74886b149e31075ed4f24871}{first} && p[0].\hyperlink{namespaceDESKeygen_a90b4cb951d052552ff184daf0e2428b2}{second} != p[1].\hyperlink{namespaceDESKeygen_a90b4cb951d052552ff184daf0e2428b2}{second}) \{
 27         s[0] = mat[p[0].first][p[1].second];
 28         s[1] = mat[p[1].first][p[0].second];
 29     \}
 31 
-35     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(p[0].first == p[1].first) \{
+35     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(p[0].\hyperlink{namespaceDESKeygen_a275c92bf74886b149e31075ed4f24871}{first} == p[1].\hyperlink{namespaceDESKeygen_a275c92bf74886b149e31075ed4f24871}{first}) \{
 36         s[0] = mat[p[0].first][(p[0].second + 1) % 5];
 37         s[1] = mat[p[1].first][(p[1].second + 1) % 5];
 38     \}

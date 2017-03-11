@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['pb',['pb',['../playfair_8cpp.html#a276c5a0e984cf60015b27252fe04fe6b',1,'pb():&#160;playfair.cpp'],['../TransCipher_8cpp.html#a276c5a0e984cf60015b27252fe04fe6b',1,'pb():&#160;TransCipher.cpp']]],
-  ['playfair_2ecpp',['playfair.cpp',['../playfair_8cpp.html',1,'']]]
+  ['implmatrix',['implmatrix',['../playfair_8cpp.html#a607720d5018e0b6c6f28af676021ed4e',1,'playfair.cpp']]],
+  ['implementing_20cryptography_20algorithms',['IMPLEMENTING CRYPTOGRAPHY ALGORITHMS',['../index.html',1,'']]],
+  ['initial_5fpermutation',['initial_permutation',['../namespaceDESKeygen.html#aeb9fe34cab63037e4276a74f8f3ffc5c',1,'DESKeygen']]],
+  ['ip',['IP',['../namespaceDESKeygen.html#a6ccc6c2aae713404c9ba45ca7959a85c',1,'DESKeygen']]]
 ];
