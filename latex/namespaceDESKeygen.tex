@@ -1,0 +1,392 @@
+\hypertarget{namespaceDESKeygen}{}\section{D\+E\+S\+Keygen Namespace Reference}
+\label{namespaceDESKeygen}\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceDESKeygen_a84313d066275cfa7748f56adc4405def}{binary\+\_\+string} (k)
+\begin{DoxyCompactList}\small\item\em B\+I\+N\+A\+RY S\+T\+R\+I\+NG C\+O\+V\+E\+R\+S\+I\+ON. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceDESKeygen_a54842a0190e5d94c214033d9d9b8acfe}{get\+\_\+x\+\_\+bit\+\_\+permutation} (k, pc)
+\begin{DoxyCompactList}\small\item\em G\+ET P\+E\+R\+M\+U\+T\+A\+T\+I\+ON S\+T\+R\+I\+NG. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceDESKeygen_ad8cc7c44b9ccc58a64ae4794d018024a}{perform\+\_\+xor} (first\+\_\+d, second\+\_\+d)
+\item 
+def \hyperlink{namespaceDESKeygen_a666d1d02c8340e03317dd6480555b8d9}{compression\+\_\+to\+\_\+32} (string)
+\begin{DoxyCompactList}\small\item\em G\+ET P\+E\+R\+M\+U\+T\+A\+T\+I\+ON S\+T\+R\+I\+NG. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{namespaceDESKeygen_af93868fb830bf819ba3a974f70268bc3}{E\+X\+P\+A\+N\+S\+I\+ON}
+\begin{DoxyCompactList}\small\item\em This is an implementation of D\+ES Cipher Algorithm D\+ES = Data Encryption Standard S\+T\+EP 1\+: create all constants first. \end{DoxyCompactList}\item 
+list \hyperlink{namespaceDESKeygen_a6ccc6c2aae713404c9ba45ca7959a85c}{IP}
+\begin{DoxyCompactList}\small\item\em IP = Initial Permutation This is used to permute the plain\+\_\+text binary form based on the beloe stated table. \end{DoxyCompactList}\item 
+list \hyperlink{namespaceDESKeygen_ad9fa6cbd0839d08d29221becb47ac2ba}{P\+C1}
+\begin{DoxyCompactList}\small\item\em P\+C1 = Permuted Choice 1 This is used to permute the plain\+\_\+text binary form based on the below stated table. \end{DoxyCompactList}\item 
+list \hyperlink{namespaceDESKeygen_aaa16a1cab6f290096983471082d523aa}{P\+C2}
+\begin{DoxyCompactList}\small\item\em P\+C2 = Permuted Choice 2 This is used to permute the plain\+\_\+text binary form based on the below stated table. \end{DoxyCompactList}\item 
+list \hyperlink{namespaceDESKeygen_a5f5d5fb8cd62da6f74e19f8c1c22a611}{L\+E\+F\+T\+R\+O\+TS}
+\item 
+list \hyperlink{namespaceDESKeygen_a6da8b8d78caa50ef61de1ccc5413dec7}{S}
+\begin{DoxyCompactList}\small\item\em S-\/\+Boxes We now do something strange with each group of six bits\+: we use them as addresses in tables called \char`\"{}\+S boxes\char`\"{}. \end{DoxyCompactList}\item 
+list \hyperlink{namespaceDESKeygen_a003266ecce54358bd8a478e22cd5f9a5}{Reduced\+\_\+ka\+\_\+permutation}
+\item 
+int \hyperlink{namespaceDESKeygen_ac3b4d157f3aa8ee5cf421bc8f39f0442}{hexa\+\_\+scale} = 16
+\item 
+\hyperlink{namespaceDESKeygen_af43f014fafd9b989e2bc32538d373ed2}{key} = str(input())
+\item 
+\hyperlink{namespaceDESKeygen_a2a0821ea3c5c35ce080f9935767b441b}{plaintext} = str(input())
+\item 
+\hyperlink{namespaceDESKeygen_aab60c41d9b210880b1939c4a61c98c1d}{L} = \hyperlink{namespaceDESKeygen_a2a0821ea3c5c35ce080f9935767b441b}{plaintext}\mbox{[}0\+:8\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_a5e6262e2d5b5d262809ce5fac81261ac}{R} = \hyperlink{namespaceDESKeygen_a2a0821ea3c5c35ce080f9935767b441b}{plaintext}\mbox{[}8\+:16\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_a493d3c517f0465c6e02e159d6fc7698e}{plain\+\_\+binary} = \hyperlink{namespaceDESKeygen_a84313d066275cfa7748f56adc4405def}{binary\+\_\+string}(\hyperlink{namespaceDESKeygen_a2a0821ea3c5c35ce080f9935767b441b}{plaintext})
+\item 
+\hyperlink{namespaceDESKeygen_a306ed33120176dbe79619181f9879730}{b\+\_\+key} = \hyperlink{namespaceDESKeygen_a84313d066275cfa7748f56adc4405def}{binary\+\_\+string}(\hyperlink{namespaceDESKeygen_af43f014fafd9b989e2bc32538d373ed2}{key})
+\item 
+\hyperlink{namespaceDESKeygen_aac37a8b4dd18161457399781c486f483}{five\+\_\+six\+\_\+perm} = \hyperlink{namespaceDESKeygen_a54842a0190e5d94c214033d9d9b8acfe}{get\+\_\+x\+\_\+bit\+\_\+permutation}(\hyperlink{namespaceDESKeygen_a306ed33120176dbe79619181f9879730}{b\+\_\+key}, \hyperlink{namespaceDESKeygen_ad9fa6cbd0839d08d29221becb47ac2ba}{P\+C1})
+\item 
+list \hyperlink{namespaceDESKeygen_a393699eacc46d06903f450fee13ab916}{C} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespaceDESKeygen_a4618ae9ac43c9af4a7a018eae1507c3c}{D} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_a275c92bf74886b149e31075ed4f24871}{first} = \hyperlink{namespaceDESKeygen_a393699eacc46d06903f450fee13ab916}{C}\mbox{[}i -\/ 1\mbox{]}\mbox{[}0\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_a90b4cb951d052552ff184daf0e2428b2}{second} = \hyperlink{namespaceDESKeygen_a4618ae9ac43c9af4a7a018eae1507c3c}{D}\mbox{[}i -\/ 1\mbox{]}\mbox{[}0\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_a0236231f847a50ccf8bb110023c5e22d}{Cx} = \hyperlink{namespaceDESKeygen_a393699eacc46d06903f450fee13ab916}{C}\mbox{[}i -\/ 1\mbox{]}\mbox{[}1\+:28\mbox{]}+\hyperlink{namespaceDESKeygen_a275c92bf74886b149e31075ed4f24871}{first}
+\item 
+\hyperlink{namespaceDESKeygen_aea3b6f6658e81a15d8e287c4f3667715}{Dx} = \hyperlink{namespaceDESKeygen_a4618ae9ac43c9af4a7a018eae1507c3c}{D}\mbox{[}i -\/ 1\mbox{]}\mbox{[}1\+:28\mbox{]}+\hyperlink{namespaceDESKeygen_a90b4cb951d052552ff184daf0e2428b2}{second}
+\item 
+list \hyperlink{namespaceDESKeygen_ae1fb953515172c35a43f6d1b1ad059d2}{key\+\_\+list} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespaceDESKeygen_ad0f1d71e576a17dbeba9f85fe469829a}{hex\+\_\+key\+\_\+list} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_aeb9fe34cab63037e4276a74f8f3ffc5c}{initial\+\_\+permutation} = \hyperlink{namespaceDESKeygen_a54842a0190e5d94c214033d9d9b8acfe}{get\+\_\+x\+\_\+bit\+\_\+permutation}(\hyperlink{namespaceDESKeygen_a493d3c517f0465c6e02e159d6fc7698e}{plain\+\_\+binary}, \hyperlink{namespaceDESKeygen_a6ccc6c2aae713404c9ba45ca7959a85c}{IP})
+\item 
+\hyperlink{namespaceDESKeygen_a4e5c92568bcd7f5d99323f378860bf9d}{L0} = \hyperlink{namespaceDESKeygen_aeb9fe34cab63037e4276a74f8f3ffc5c}{initial\+\_\+permutation}\mbox{[}0\+:32\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_a69b702b5d982f05779ac0c29e54bb451}{R0} = \hyperlink{namespaceDESKeygen_aeb9fe34cab63037e4276a74f8f3ffc5c}{initial\+\_\+permutation}\mbox{[}32\+:64\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_a30327764187e06393c03bad43c2dc79a}{L1} = copy(\hyperlink{namespaceDESKeygen_a69b702b5d982f05779ac0c29e54bb451}{R0})
+\item 
+\hyperlink{namespaceDESKeygen_a37a1e1e67c012d08675df6566f98965b}{E\+R0} = \hyperlink{namespaceDESKeygen_a54842a0190e5d94c214033d9d9b8acfe}{get\+\_\+x\+\_\+bit\+\_\+permutation}(\hyperlink{namespaceDESKeygen_a69b702b5d982f05779ac0c29e54bb451}{R0}, \hyperlink{namespaceDESKeygen_af93868fb830bf819ba3a974f70268bc3}{E\+X\+P\+A\+N\+S\+I\+ON})
+\item 
+\hyperlink{namespaceDESKeygen_a4d187125752e3fdcb87d8aa96ba0de87}{func\+\_\+\+E\+R0\+K1} = \hyperlink{namespaceDESKeygen_ad8cc7c44b9ccc58a64ae4794d018024a}{perform\+\_\+xor}(\hyperlink{namespaceDESKeygen_ae1fb953515172c35a43f6d1b1ad059d2}{key\+\_\+list}\mbox{[}0\mbox{]}, \hyperlink{namespaceDESKeygen_a37a1e1e67c012d08675df6566f98965b}{E\+R0})
+\item 
+\hyperlink{namespaceDESKeygen_a4bbbb736b16854d40efe76c80b618630}{reduced\+\_\+value} = \hyperlink{namespaceDESKeygen_a666d1d02c8340e03317dd6480555b8d9}{compression\+\_\+to\+\_\+32}(\hyperlink{namespaceDESKeygen_a4d187125752e3fdcb87d8aa96ba0de87}{func\+\_\+\+E\+R0\+K1})
+\item 
+\hyperlink{namespaceDESKeygen_ad42968adaf55c4fd51e9901eb3237696}{permuted\+\_\+reduced\+\_\+val} = \hyperlink{namespaceDESKeygen_a54842a0190e5d94c214033d9d9b8acfe}{get\+\_\+x\+\_\+bit\+\_\+permutation}(\hyperlink{namespaceDESKeygen_a4bbbb736b16854d40efe76c80b618630}{reduced\+\_\+value}, \hyperlink{namespaceDESKeygen_a003266ecce54358bd8a478e22cd5f9a5}{Reduced\+\_\+ka\+\_\+permutation})
+\item 
+\hyperlink{namespaceDESKeygen_aee7e8f986620f3eda7fca3cbdfc5b4d3}{R1} = \hyperlink{namespaceDESKeygen_ad8cc7c44b9ccc58a64ae4794d018024a}{perform\+\_\+xor}(\hyperlink{namespaceDESKeygen_a4e5c92568bcd7f5d99323f378860bf9d}{L0}, \hyperlink{namespaceDESKeygen_ad42968adaf55c4fd51e9901eb3237696}{permuted\+\_\+reduced\+\_\+val})
+\item 
+\hyperlink{namespaceDESKeygen_ad33c4097fff60ff4ff6a9ad24fc3d425}{final\+\_\+bit\+\_\+string} = \hyperlink{namespaceDESKeygen_a30327764187e06393c03bad43c2dc79a}{L1}+\hyperlink{namespaceDESKeygen_aee7e8f986620f3eda7fca3cbdfc5b4d3}{R1}
+\item 
+\hyperlink{namespaceDESKeygen_a0b62d751252e5fe18e6f9b68ace70a5f}{final\+\_\+res} = hex(int(\hyperlink{namespaceDESKeygen_ad33c4097fff60ff4ff6a9ad24fc3d425}{final\+\_\+bit\+\_\+string}, 2))\mbox{[}2\+:\mbox{]}.upper()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}@package DESKeygen
+Documentation for this module.
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!binary\+\_\+string@{binary\+\_\+string}}
+\index{binary\+\_\+string@{binary\+\_\+string}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{binary\+\_\+string(k)}{binary_string(k)}}]{\setlength{\rightskip}{0pt plus 5cm}def D\+E\+S\+Keygen.\+binary\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{}]{k}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceDESKeygen_a84313d066275cfa7748f56adc4405def}{}\label{namespaceDESKeygen_a84313d066275cfa7748f56adc4405def}
+
+
+B\+I\+N\+A\+RY S\+T\+R\+I\+NG C\+O\+V\+E\+R\+S\+I\+ON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & hexanumber This basically returns a string of 64 bits to the caller \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+137 \textcolor{keyword}{def }\hyperlink{namespaceDESKeygen_a84313d066275cfa7748f56adc4405def}{binary\_string}(k):
+138     string = bin(int(k, hexa\_scale))[2:].zfill(64)
+139     \textcolor{keywordflow}{return} string
+140 
+141 
+\end{DoxyCode}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!compression\+\_\+to\+\_\+32@{compression\+\_\+to\+\_\+32}}
+\index{compression\+\_\+to\+\_\+32@{compression\+\_\+to\+\_\+32}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{compression\+\_\+to\+\_\+32(string)}{compression_to_32(string)}}]{\setlength{\rightskip}{0pt plus 5cm}def D\+E\+S\+Keygen.\+compression\+\_\+to\+\_\+32 (
+\begin{DoxyParamCaption}
+\item[{}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceDESKeygen_a666d1d02c8340e03317dd6480555b8d9}{}\label{namespaceDESKeygen_a666d1d02c8340e03317dd6480555b8d9}
+
+
+G\+ET P\+E\+R\+M\+U\+T\+A\+T\+I\+ON S\+T\+R\+I\+NG. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & the 48-\/bit key Returns a compressed string of 32-\/bits using the S-\/boxes \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+166 \textcolor{keyword}{def }\hyperlink{namespaceDESKeygen_a666d1d02c8340e03317dd6480555b8d9}{compression\_to\_32}(string):
+167     compressed\_val = \textcolor{stringliteral}{''}
+168     \textcolor{keywordflow}{for} j \textcolor{keywordflow}{in} range(0, 8):
+169         six\_bit = string[j * 6: (j + 1) * 6]
+170         bin1 = six\_bit[0] + six\_bit[5]
+171         bin2 = six\_bit[1:5]
+172         row\_val = int(bin1, 2)
+173         col\_val = int(bin2, 2)
+174         \textcolor{comment}{# print(str(row\_val) + " " + str(col\_val))}
+175         check\_val = S[j][row\_val * 16 + col\_val]
+176         compressed\_val += (bin(check\_val)[2:].zfill(4))
+177     \textcolor{keywordflow}{return} compressed\_val
+178 
+179 
+180 \textcolor{comment}{# plaintext = '0123456789ABCDEF'}
+181 \textcolor{comment}{# key = '133457799BBCDFF1'}
+\end{DoxyCode}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!get\+\_\+x\+\_\+bit\+\_\+permutation@{get\+\_\+x\+\_\+bit\+\_\+permutation}}
+\index{get\+\_\+x\+\_\+bit\+\_\+permutation@{get\+\_\+x\+\_\+bit\+\_\+permutation}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{get\+\_\+x\+\_\+bit\+\_\+permutation(k, pc)}{get_x_bit_permutation(k, pc)}}]{\setlength{\rightskip}{0pt plus 5cm}def D\+E\+S\+Keygen.\+get\+\_\+x\+\_\+bit\+\_\+permutation (
+\begin{DoxyParamCaption}
+\item[{}]{k, }
+\item[{}]{pc}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceDESKeygen_a54842a0190e5d94c214033d9d9b8acfe}{}\label{namespaceDESKeygen_a54842a0190e5d94c214033d9d9b8acfe}
+
+
+G\+ET P\+E\+R\+M\+U\+T\+A\+T\+I\+ON S\+T\+R\+I\+NG. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & hexanumber \\
+\hline
+{\em pc} & Permutation Array This basically returns a string formed by the PC array using permutation bits \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+146 \textcolor{keyword}{def }\hyperlink{namespaceDESKeygen_a54842a0190e5d94c214033d9d9b8acfe}{get\_x\_bit\_permutation}(k, pc):
+147     new\_perm = \textcolor{stringliteral}{""}
+148     size = len(pc)
+149     \textcolor{keywordflow}{for} it \textcolor{keywordflow}{in} range(0, size):
+150         new\_perm += str(k[pc[it]])
+151     \textcolor{keywordflow}{return} new\_perm
+152 
+153 
+\end{DoxyCode}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!perform\+\_\+xor@{perform\+\_\+xor}}
+\index{perform\+\_\+xor@{perform\+\_\+xor}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{perform\+\_\+xor(first\+\_\+d, second\+\_\+d)}{perform_xor(first_d, second_d)}}]{\setlength{\rightskip}{0pt plus 5cm}def D\+E\+S\+Keygen.\+perform\+\_\+xor (
+\begin{DoxyParamCaption}
+\item[{}]{first\+\_\+d, }
+\item[{}]{second\+\_\+d}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceDESKeygen_ad8cc7c44b9ccc58a64ae4794d018024a}{}\label{namespaceDESKeygen_ad8cc7c44b9ccc58a64ae4794d018024a}
+
+\begin{DoxyCode}
+154 \textcolor{keyword}{def }\hyperlink{namespaceDESKeygen_ad8cc7c44b9ccc58a64ae4794d018024a}{perform\_xor}(first\_d, second\_d):
+155     bit\_len = len(first\_d)
+156     xorred\_data = \textcolor{stringliteral}{""}
+157     \textcolor{keywordflow}{for} it \textcolor{keywordflow}{in} range(0, bit\_len):
+158         val = int(first\_d[it]) ^ int(second\_d[it])
+159         xorred\_data += (str(val))
+160     \textcolor{keywordflow}{return} xorred\_data
+161 
+162 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!b\+\_\+key@{b\+\_\+key}}
+\index{b\+\_\+key@{b\+\_\+key}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{b\+\_\+key}{b_key}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+b\+\_\+key = {\bf binary\+\_\+string}({\bf key})}\hypertarget{namespaceDESKeygen_a306ed33120176dbe79619181f9879730}{}\label{namespaceDESKeygen_a306ed33120176dbe79619181f9879730}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!C@{C}}
+\index{C@{C}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{C}{C}}]{\setlength{\rightskip}{0pt plus 5cm}list D\+E\+S\+Keygen.\+C = \mbox{[}$\,$\mbox{]}}\hypertarget{namespaceDESKeygen_a393699eacc46d06903f450fee13ab916}{}\label{namespaceDESKeygen_a393699eacc46d06903f450fee13ab916}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!Cx@{Cx}}
+\index{Cx@{Cx}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{Cx}{Cx}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+Cx = {\bf C}\mbox{[}i -\/ 1\mbox{]}\mbox{[}1\+:28\mbox{]}+{\bf first}}\hypertarget{namespaceDESKeygen_a0236231f847a50ccf8bb110023c5e22d}{}\label{namespaceDESKeygen_a0236231f847a50ccf8bb110023c5e22d}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!D@{D}}
+\index{D@{D}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{D}{D}}]{\setlength{\rightskip}{0pt plus 5cm}list D\+E\+S\+Keygen.\+D = \mbox{[}$\,$\mbox{]}}\hypertarget{namespaceDESKeygen_a4618ae9ac43c9af4a7a018eae1507c3c}{}\label{namespaceDESKeygen_a4618ae9ac43c9af4a7a018eae1507c3c}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!Dx@{Dx}}
+\index{Dx@{Dx}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{Dx}{Dx}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+Dx = {\bf D}\mbox{[}i -\/ 1\mbox{]}\mbox{[}1\+:28\mbox{]}+{\bf second}}\hypertarget{namespaceDESKeygen_aea3b6f6658e81a15d8e287c4f3667715}{}\label{namespaceDESKeygen_aea3b6f6658e81a15d8e287c4f3667715}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!E\+R0@{E\+R0}}
+\index{E\+R0@{E\+R0}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{E\+R0}{ER0}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+E\+R0 = {\bf get\+\_\+x\+\_\+bit\+\_\+permutation}({\bf R0}, {\bf E\+X\+P\+A\+N\+S\+I\+ON})}\hypertarget{namespaceDESKeygen_a37a1e1e67c012d08675df6566f98965b}{}\label{namespaceDESKeygen_a37a1e1e67c012d08675df6566f98965b}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!E\+X\+P\+A\+N\+S\+I\+ON@{E\+X\+P\+A\+N\+S\+I\+ON}}
+\index{E\+X\+P\+A\+N\+S\+I\+ON@{E\+X\+P\+A\+N\+S\+I\+ON}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{E\+X\+P\+A\+N\+S\+I\+ON}{EXPANSION}}]{\setlength{\rightskip}{0pt plus 5cm}list D\+E\+S\+Keygen.\+E\+X\+P\+A\+N\+S\+I\+ON}\hypertarget{namespaceDESKeygen_af93868fb830bf819ba3a974f70268bc3}{}\label{namespaceDESKeygen_af93868fb830bf819ba3a974f70268bc3}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 = [
+2     31, 0, 1, 2, 3, 4,
+3     3, 4, 5, 6, 7, 8,
+4     7, 8, 9, 10, 11, 12,
+5     11, 12, 13, 14, 15, 16,
+6     15, 16, 17, 18, 19, 20,
+7     19, 20, 21, 22, 23, 24,
+8     23, 24, 25, 26, 27, 28,
+9     27, 28, 29, 30, 31, 0
+10 ]
+\end{DoxyCode}
+
+
+This is an implementation of D\+ES Cipher Algorithm D\+ES = Data Encryption Standard S\+T\+EP 1\+: create all constants first. 
+
+The follow lists are values used for encryption \index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!final\+\_\+bit\+\_\+string@{final\+\_\+bit\+\_\+string}}
+\index{final\+\_\+bit\+\_\+string@{final\+\_\+bit\+\_\+string}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{final\+\_\+bit\+\_\+string}{final_bit_string}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+final\+\_\+bit\+\_\+string = {\bf L1}+{\bf R1}}\hypertarget{namespaceDESKeygen_ad33c4097fff60ff4ff6a9ad24fc3d425}{}\label{namespaceDESKeygen_ad33c4097fff60ff4ff6a9ad24fc3d425}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!final\+\_\+res@{final\+\_\+res}}
+\index{final\+\_\+res@{final\+\_\+res}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{final\+\_\+res}{final_res}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+final\+\_\+res = hex(int({\bf final\+\_\+bit\+\_\+string}, 2))\mbox{[}2\+:\mbox{]}.upper()}\hypertarget{namespaceDESKeygen_a0b62d751252e5fe18e6f9b68ace70a5f}{}\label{namespaceDESKeygen_a0b62d751252e5fe18e6f9b68ace70a5f}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!first@{first}}
+\index{first@{first}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{first}{first}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+first = {\bf C}\mbox{[}i -\/ 1\mbox{]}\mbox{[}0\mbox{]}}\hypertarget{namespaceDESKeygen_a275c92bf74886b149e31075ed4f24871}{}\label{namespaceDESKeygen_a275c92bf74886b149e31075ed4f24871}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!five\+\_\+six\+\_\+perm@{five\+\_\+six\+\_\+perm}}
+\index{five\+\_\+six\+\_\+perm@{five\+\_\+six\+\_\+perm}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{five\+\_\+six\+\_\+perm}{five_six_perm}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+five\+\_\+six\+\_\+perm = {\bf get\+\_\+x\+\_\+bit\+\_\+permutation}({\bf b\+\_\+key}, {\bf P\+C1})}\hypertarget{namespaceDESKeygen_aac37a8b4dd18161457399781c486f483}{}\label{namespaceDESKeygen_aac37a8b4dd18161457399781c486f483}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!func\+\_\+\+E\+R0\+K1@{func\+\_\+\+E\+R0\+K1}}
+\index{func\+\_\+\+E\+R0\+K1@{func\+\_\+\+E\+R0\+K1}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{func\+\_\+\+E\+R0\+K1}{func_ER0K1}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+func\+\_\+\+E\+R0\+K1 = {\bf perform\+\_\+xor}({\bf key\+\_\+list}\mbox{[}0\mbox{]}, {\bf E\+R0})}\hypertarget{namespaceDESKeygen_a4d187125752e3fdcb87d8aa96ba0de87}{}\label{namespaceDESKeygen_a4d187125752e3fdcb87d8aa96ba0de87}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!hex\+\_\+key\+\_\+list@{hex\+\_\+key\+\_\+list}}
+\index{hex\+\_\+key\+\_\+list@{hex\+\_\+key\+\_\+list}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{hex\+\_\+key\+\_\+list}{hex_key_list}}]{\setlength{\rightskip}{0pt plus 5cm}list D\+E\+S\+Keygen.\+hex\+\_\+key\+\_\+list = \mbox{[}$\,$\mbox{]}}\hypertarget{namespaceDESKeygen_ad0f1d71e576a17dbeba9f85fe469829a}{}\label{namespaceDESKeygen_ad0f1d71e576a17dbeba9f85fe469829a}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!hexa\+\_\+scale@{hexa\+\_\+scale}}
+\index{hexa\+\_\+scale@{hexa\+\_\+scale}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{hexa\+\_\+scale}{hexa_scale}}]{\setlength{\rightskip}{0pt plus 5cm}int D\+E\+S\+Keygen.\+hexa\+\_\+scale = 16}\hypertarget{namespaceDESKeygen_ac3b4d157f3aa8ee5cf421bc8f39f0442}{}\label{namespaceDESKeygen_ac3b4d157f3aa8ee5cf421bc8f39f0442}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!initial\+\_\+permutation@{initial\+\_\+permutation}}
+\index{initial\+\_\+permutation@{initial\+\_\+permutation}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{initial\+\_\+permutation}{initial_permutation}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+initial\+\_\+permutation = {\bf get\+\_\+x\+\_\+bit\+\_\+permutation}({\bf plain\+\_\+binary}, {\bf IP})}\hypertarget{namespaceDESKeygen_aeb9fe34cab63037e4276a74f8f3ffc5c}{}\label{namespaceDESKeygen_aeb9fe34cab63037e4276a74f8f3ffc5c}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!IP@{IP}}
+\index{IP@{IP}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{IP}{IP}}]{\setlength{\rightskip}{0pt plus 5cm}list D\+E\+S\+Keygen.\+IP}\hypertarget{namespaceDESKeygen_a6ccc6c2aae713404c9ba45ca7959a85c}{}\label{namespaceDESKeygen_a6ccc6c2aae713404c9ba45ca7959a85c}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 = [57, 49, 41, 33, 25, 17, 9, 1,
+2       59, 51, 43, 35, 27, 19, 11, 3,
+3       61, 53, 45, 37, 29, 21, 13, 5,
+4       63, 55, 47, 39, 31, 23, 15, 7,
+5       56, 48, 40, 32, 24, 16, 8, 0,
+6       58, 50, 42, 34, 26, 18, 10, 2,
+7       60, 52, 44, 36, 28, 20, 12, 4,
+8       62, 54, 46, 38, 30, 22, 14, 6
+9       ]
+\end{DoxyCode}
+
+
+IP = Initial Permutation This is used to permute the plain\+\_\+text binary form based on the beloe stated table. 
+
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!key@{key}}
+\index{key@{key}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{key}{key}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+key = str(input())}\hypertarget{namespaceDESKeygen_af43f014fafd9b989e2bc32538d373ed2}{}\label{namespaceDESKeygen_af43f014fafd9b989e2bc32538d373ed2}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!key\+\_\+list@{key\+\_\+list}}
+\index{key\+\_\+list@{key\+\_\+list}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{key\+\_\+list}{key_list}}]{\setlength{\rightskip}{0pt plus 5cm}list D\+E\+S\+Keygen.\+key\+\_\+list = \mbox{[}$\,$\mbox{]}}\hypertarget{namespaceDESKeygen_ae1fb953515172c35a43f6d1b1ad059d2}{}\label{namespaceDESKeygen_ae1fb953515172c35a43f6d1b1ad059d2}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!L@{L}}
+\index{L@{L}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{L}{L}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+L = {\bf plaintext}\mbox{[}0\+:8\mbox{]}}\hypertarget{namespaceDESKeygen_aab60c41d9b210880b1939c4a61c98c1d}{}\label{namespaceDESKeygen_aab60c41d9b210880b1939c4a61c98c1d}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!L0@{L0}}
+\index{L0@{L0}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{L0}{L0}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+L0 = {\bf initial\+\_\+permutation}\mbox{[}0\+:32\mbox{]}}\hypertarget{namespaceDESKeygen_a4e5c92568bcd7f5d99323f378860bf9d}{}\label{namespaceDESKeygen_a4e5c92568bcd7f5d99323f378860bf9d}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!L1@{L1}}
+\index{L1@{L1}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{L1}{L1}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+L1 = copy({\bf R0})}\hypertarget{namespaceDESKeygen_a30327764187e06393c03bad43c2dc79a}{}\label{namespaceDESKeygen_a30327764187e06393c03bad43c2dc79a}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!L\+E\+F\+T\+R\+O\+TS@{L\+E\+F\+T\+R\+O\+TS}}
+\index{L\+E\+F\+T\+R\+O\+TS@{L\+E\+F\+T\+R\+O\+TS}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{L\+E\+F\+T\+R\+O\+TS}{LEFTROTS}}]{\setlength{\rightskip}{0pt plus 5cm}list D\+E\+S\+Keygen.\+L\+E\+F\+T\+R\+O\+TS}\hypertarget{namespaceDESKeygen_a5f5d5fb8cd62da6f74e19f8c1c22a611}{}\label{namespaceDESKeygen_a5f5d5fb8cd62da6f74e19f8c1c22a611}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 = [
+2     1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1
+3 ]
+\end{DoxyCode}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!P\+C1@{P\+C1}}
+\index{P\+C1@{P\+C1}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{P\+C1}{PC1}}]{\setlength{\rightskip}{0pt plus 5cm}list D\+E\+S\+Keygen.\+P\+C1}\hypertarget{namespaceDESKeygen_ad9fa6cbd0839d08d29221becb47ac2ba}{}\label{namespaceDESKeygen_ad9fa6cbd0839d08d29221becb47ac2ba}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 = [56, 48, 40, 32, 24, 16, 8,
+2        0, 57, 49, 41, 33, 25, 17,
+3        9, 1, 58, 50, 42, 34, 26,
+4        18, 10, 2, 59, 51, 43, 35,
+5        62, 54, 46, 38, 30, 22, 14,
+6        6, 61, 53, 45, 37, 29, 21,
+7        13, 5, 60, 52, 44, 36, 28,
+8        20, 12, 4, 27, 19, 11, 3]
+\end{DoxyCode}
+
+
+P\+C1 = Permuted Choice 1 This is used to permute the plain\+\_\+text binary form based on the below stated table. 
+
+Basically P\+C1 converts the 64 bits key to 56 bit and values at 8th, 16th bits and soon are removed \index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!P\+C2@{P\+C2}}
+\index{P\+C2@{P\+C2}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{P\+C2}{PC2}}]{\setlength{\rightskip}{0pt plus 5cm}list D\+E\+S\+Keygen.\+P\+C2}\hypertarget{namespaceDESKeygen_aaa16a1cab6f290096983471082d523aa}{}\label{namespaceDESKeygen_aaa16a1cab6f290096983471082d523aa}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 = [13, 16, 10, 23, 0, 4,
+2        2, 27, 14, 5, 20, 9,
+3        22, 18, 11, 3, 25, 7,
+4        15, 6, 26, 19, 12, 1,
+5        40, 51, 30, 36, 46, 54,
+6        29, 39, 50, 44, 32, 47,
+7        43, 48, 38, 55, 33, 52,
+8        45, 41, 49, 35, 28, 31
+9        ]
+\end{DoxyCode}
+
+
+P\+C2 = Permuted Choice 2 This is used to permute the plain\+\_\+text binary form based on the below stated table. 
+
+Basically P\+C1 converts the 56 bits key to 48 bit. \index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!permuted\+\_\+reduced\+\_\+val@{permuted\+\_\+reduced\+\_\+val}}
+\index{permuted\+\_\+reduced\+\_\+val@{permuted\+\_\+reduced\+\_\+val}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{permuted\+\_\+reduced\+\_\+val}{permuted_reduced_val}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+permuted\+\_\+reduced\+\_\+val = {\bf get\+\_\+x\+\_\+bit\+\_\+permutation}({\bf reduced\+\_\+value}, {\bf Reduced\+\_\+ka\+\_\+permutation})}\hypertarget{namespaceDESKeygen_ad42968adaf55c4fd51e9901eb3237696}{}\label{namespaceDESKeygen_ad42968adaf55c4fd51e9901eb3237696}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!plain\+\_\+binary@{plain\+\_\+binary}}
+\index{plain\+\_\+binary@{plain\+\_\+binary}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{plain\+\_\+binary}{plain_binary}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+plain\+\_\+binary = {\bf binary\+\_\+string}({\bf plaintext})}\hypertarget{namespaceDESKeygen_a493d3c517f0465c6e02e159d6fc7698e}{}\label{namespaceDESKeygen_a493d3c517f0465c6e02e159d6fc7698e}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!plaintext@{plaintext}}
+\index{plaintext@{plaintext}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{plaintext}{plaintext}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+plaintext = str(input())}\hypertarget{namespaceDESKeygen_a2a0821ea3c5c35ce080f9935767b441b}{}\label{namespaceDESKeygen_a2a0821ea3c5c35ce080f9935767b441b}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!R@{R}}
+\index{R@{R}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{R}{R}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+R = {\bf plaintext}\mbox{[}8\+:16\mbox{]}}\hypertarget{namespaceDESKeygen_a5e6262e2d5b5d262809ce5fac81261ac}{}\label{namespaceDESKeygen_a5e6262e2d5b5d262809ce5fac81261ac}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!R0@{R0}}
+\index{R0@{R0}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{R0}{R0}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+R0 = {\bf initial\+\_\+permutation}\mbox{[}32\+:64\mbox{]}}\hypertarget{namespaceDESKeygen_a69b702b5d982f05779ac0c29e54bb451}{}\label{namespaceDESKeygen_a69b702b5d982f05779ac0c29e54bb451}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!R1@{R1}}
+\index{R1@{R1}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{R1}{R1}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+R1 = {\bf perform\+\_\+xor}({\bf L0}, {\bf permuted\+\_\+reduced\+\_\+val})}\hypertarget{namespaceDESKeygen_aee7e8f986620f3eda7fca3cbdfc5b4d3}{}\label{namespaceDESKeygen_aee7e8f986620f3eda7fca3cbdfc5b4d3}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!Reduced\+\_\+ka\+\_\+permutation@{Reduced\+\_\+ka\+\_\+permutation}}
+\index{Reduced\+\_\+ka\+\_\+permutation@{Reduced\+\_\+ka\+\_\+permutation}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{Reduced\+\_\+ka\+\_\+permutation}{Reduced_ka_permutation}}]{\setlength{\rightskip}{0pt plus 5cm}list D\+E\+S\+Keygen.\+Reduced\+\_\+ka\+\_\+permutation}\hypertarget{namespaceDESKeygen_a003266ecce54358bd8a478e22cd5f9a5}{}\label{namespaceDESKeygen_a003266ecce54358bd8a478e22cd5f9a5}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 = [
+2     15, 6, 19, 20, 28, 11,
+3     27, 16, 0, 14, 22, 25,
+4     4, 17, 30, 9, 1, 7,
+5     23, 13, 31, 26, 2, 8,
+6     18, 12, 29, 5, 21, 10,
+7     3, 24
+8 ]
+\end{DoxyCode}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!reduced\+\_\+value@{reduced\+\_\+value}}
+\index{reduced\+\_\+value@{reduced\+\_\+value}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{reduced\+\_\+value}{reduced_value}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+reduced\+\_\+value = {\bf compression\+\_\+to\+\_\+32}({\bf func\+\_\+\+E\+R0\+K1})}\hypertarget{namespaceDESKeygen_a4bbbb736b16854d40efe76c80b618630}{}\label{namespaceDESKeygen_a4bbbb736b16854d40efe76c80b618630}
+\index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!S@{S}}
+\index{S@{S}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{S}{S}}]{\setlength{\rightskip}{0pt plus 5cm}list D\+E\+S\+Keygen.\+S}\hypertarget{namespaceDESKeygen_a6da8b8d78caa50ef61de1ccc5413dec7}{}\label{namespaceDESKeygen_a6da8b8d78caa50ef61de1ccc5413dec7}
+
+
+S-\/\+Boxes We now do something strange with each group of six bits\+: we use them as addresses in tables called \char`\"{}\+S boxes\char`\"{}. 
+
+Each group of six bits will give us an address in a different S box. Located at that address will be a 4 bit number. This 4 bit number will replace the original 6 bits. The net result is that the eight groups of 6 bits are transformed into eight groups of 4 bits (the 4-\/bit outputs from the S boxes) for 32 bits total. \index{D\+E\+S\+Keygen@{D\+E\+S\+Keygen}!second@{second}}
+\index{second@{second}!D\+E\+S\+Keygen@{D\+E\+S\+Keygen}}
+\subsubsection[{\texorpdfstring{second}{second}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+S\+Keygen.\+second = {\bf D}\mbox{[}i -\/ 1\mbox{]}\mbox{[}0\mbox{]}}\hypertarget{namespaceDESKeygen_a90b4cb951d052552ff184daf0e2428b2}{}\label{namespaceDESKeygen_a90b4cb951d052552ff184daf0e2428b2}

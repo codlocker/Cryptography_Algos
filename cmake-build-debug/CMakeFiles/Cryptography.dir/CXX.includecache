@@ -12,6 +12,12 @@ iostream
 bits/stdc++.h
 -
 
+/home/shuttle3468/CLionProjects/Cryptography/decr_routeCipher.cpp
+iostream
+-
+bits/stdc++.h
+-
+
 /home/shuttle3468/CLionProjects/Cryptography/main.cpp
 iostream
 -

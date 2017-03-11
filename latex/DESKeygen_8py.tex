@@ -1,0 +1,89 @@
+\hypertarget{DESKeygen_8py}{}\section{D\+E\+S\+Keygen.\+py File Reference}
+\label{DESKeygen_8py}\index{D\+E\+S\+Keygen.\+py@{D\+E\+S\+Keygen.\+py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceDESKeygen}{D\+E\+S\+Keygen}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceDESKeygen_a84313d066275cfa7748f56adc4405def}{D\+E\+S\+Keygen.\+binary\+\_\+string} (k)
+\begin{DoxyCompactList}\small\item\em B\+I\+N\+A\+RY S\+T\+R\+I\+NG C\+O\+V\+E\+R\+S\+I\+ON. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceDESKeygen_a54842a0190e5d94c214033d9d9b8acfe}{D\+E\+S\+Keygen.\+get\+\_\+x\+\_\+bit\+\_\+permutation} (k, pc)
+\begin{DoxyCompactList}\small\item\em G\+ET P\+E\+R\+M\+U\+T\+A\+T\+I\+ON S\+T\+R\+I\+NG. \end{DoxyCompactList}\item 
+def \hyperlink{namespaceDESKeygen_ad8cc7c44b9ccc58a64ae4794d018024a}{D\+E\+S\+Keygen.\+perform\+\_\+xor} (first\+\_\+d, second\+\_\+d)
+\item 
+def \hyperlink{namespaceDESKeygen_a666d1d02c8340e03317dd6480555b8d9}{D\+E\+S\+Keygen.\+compression\+\_\+to\+\_\+32} (string)
+\begin{DoxyCompactList}\small\item\em G\+ET P\+E\+R\+M\+U\+T\+A\+T\+I\+ON S\+T\+R\+I\+NG. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{namespaceDESKeygen_af93868fb830bf819ba3a974f70268bc3}{D\+E\+S\+Keygen.\+E\+X\+P\+A\+N\+S\+I\+ON}
+\begin{DoxyCompactList}\small\item\em This is an implementation of D\+ES Cipher Algorithm D\+ES = Data Encryption Standard S\+T\+EP 1\+: create all constants first. \end{DoxyCompactList}\item 
+list \hyperlink{namespaceDESKeygen_a6ccc6c2aae713404c9ba45ca7959a85c}{D\+E\+S\+Keygen.\+IP}
+\begin{DoxyCompactList}\small\item\em IP = Initial Permutation This is used to permute the plain\+\_\+text binary form based on the beloe stated table. \end{DoxyCompactList}\item 
+list \hyperlink{namespaceDESKeygen_ad9fa6cbd0839d08d29221becb47ac2ba}{D\+E\+S\+Keygen.\+P\+C1}
+\begin{DoxyCompactList}\small\item\em P\+C1 = Permuted Choice 1 This is used to permute the plain\+\_\+text binary form based on the below stated table. \end{DoxyCompactList}\item 
+list \hyperlink{namespaceDESKeygen_aaa16a1cab6f290096983471082d523aa}{D\+E\+S\+Keygen.\+P\+C2}
+\begin{DoxyCompactList}\small\item\em P\+C2 = Permuted Choice 2 This is used to permute the plain\+\_\+text binary form based on the below stated table. \end{DoxyCompactList}\item 
+list \hyperlink{namespaceDESKeygen_a5f5d5fb8cd62da6f74e19f8c1c22a611}{D\+E\+S\+Keygen.\+L\+E\+F\+T\+R\+O\+TS}
+\item 
+list \hyperlink{namespaceDESKeygen_a6da8b8d78caa50ef61de1ccc5413dec7}{D\+E\+S\+Keygen.\+S}
+\begin{DoxyCompactList}\small\item\em S-\/\+Boxes We now do something strange with each group of six bits\+: we use them as addresses in tables called \char`\"{}\+S boxes\char`\"{}. \end{DoxyCompactList}\item 
+list \hyperlink{namespaceDESKeygen_a003266ecce54358bd8a478e22cd5f9a5}{D\+E\+S\+Keygen.\+Reduced\+\_\+ka\+\_\+permutation}
+\item 
+int \hyperlink{namespaceDESKeygen_ac3b4d157f3aa8ee5cf421bc8f39f0442}{D\+E\+S\+Keygen.\+hexa\+\_\+scale} = 16
+\item 
+\hyperlink{namespaceDESKeygen_af43f014fafd9b989e2bc32538d373ed2}{D\+E\+S\+Keygen.\+key} = str(input())
+\item 
+\hyperlink{namespaceDESKeygen_a2a0821ea3c5c35ce080f9935767b441b}{D\+E\+S\+Keygen.\+plaintext} = str(input())
+\item 
+\hyperlink{namespaceDESKeygen_aab60c41d9b210880b1939c4a61c98c1d}{D\+E\+S\+Keygen.\+L} = plaintext\mbox{[}0\+:8\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_a5e6262e2d5b5d262809ce5fac81261ac}{D\+E\+S\+Keygen.\+R} = plaintext\mbox{[}8\+:16\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_a493d3c517f0465c6e02e159d6fc7698e}{D\+E\+S\+Keygen.\+plain\+\_\+binary} = binary\+\_\+string(plaintext)
+\item 
+\hyperlink{namespaceDESKeygen_a306ed33120176dbe79619181f9879730}{D\+E\+S\+Keygen.\+b\+\_\+key} = binary\+\_\+string(key)
+\item 
+\hyperlink{namespaceDESKeygen_aac37a8b4dd18161457399781c486f483}{D\+E\+S\+Keygen.\+five\+\_\+six\+\_\+perm} = get\+\_\+x\+\_\+bit\+\_\+permutation(b\+\_\+key, P\+C1)
+\item 
+list \hyperlink{namespaceDESKeygen_a393699eacc46d06903f450fee13ab916}{D\+E\+S\+Keygen.\+C} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespaceDESKeygen_a4618ae9ac43c9af4a7a018eae1507c3c}{D\+E\+S\+Keygen.\+D} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_a275c92bf74886b149e31075ed4f24871}{D\+E\+S\+Keygen.\+first} = C\mbox{[}i -\/ 1\mbox{]}\mbox{[}0\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_a90b4cb951d052552ff184daf0e2428b2}{D\+E\+S\+Keygen.\+second} = D\mbox{[}i -\/ 1\mbox{]}\mbox{[}0\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_a0236231f847a50ccf8bb110023c5e22d}{D\+E\+S\+Keygen.\+Cx} = C\mbox{[}i -\/ 1\mbox{]}\mbox{[}1\+:28\mbox{]}+first
+\item 
+\hyperlink{namespaceDESKeygen_aea3b6f6658e81a15d8e287c4f3667715}{D\+E\+S\+Keygen.\+Dx} = D\mbox{[}i -\/ 1\mbox{]}\mbox{[}1\+:28\mbox{]}+second
+\item 
+list \hyperlink{namespaceDESKeygen_ae1fb953515172c35a43f6d1b1ad059d2}{D\+E\+S\+Keygen.\+key\+\_\+list} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespaceDESKeygen_ad0f1d71e576a17dbeba9f85fe469829a}{D\+E\+S\+Keygen.\+hex\+\_\+key\+\_\+list} = \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_aeb9fe34cab63037e4276a74f8f3ffc5c}{D\+E\+S\+Keygen.\+initial\+\_\+permutation} = get\+\_\+x\+\_\+bit\+\_\+permutation(plain\+\_\+binary, IP)
+\item 
+\hyperlink{namespaceDESKeygen_a4e5c92568bcd7f5d99323f378860bf9d}{D\+E\+S\+Keygen.\+L0} = initial\+\_\+permutation\mbox{[}0\+:32\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_a69b702b5d982f05779ac0c29e54bb451}{D\+E\+S\+Keygen.\+R0} = initial\+\_\+permutation\mbox{[}32\+:64\mbox{]}
+\item 
+\hyperlink{namespaceDESKeygen_a30327764187e06393c03bad43c2dc79a}{D\+E\+S\+Keygen.\+L1} = copy(R0)
+\item 
+\hyperlink{namespaceDESKeygen_a37a1e1e67c012d08675df6566f98965b}{D\+E\+S\+Keygen.\+E\+R0} = get\+\_\+x\+\_\+bit\+\_\+permutation(R0, E\+X\+P\+A\+N\+S\+I\+ON)
+\item 
+\hyperlink{namespaceDESKeygen_a4d187125752e3fdcb87d8aa96ba0de87}{D\+E\+S\+Keygen.\+func\+\_\+\+E\+R0\+K1} = perform\+\_\+xor(key\+\_\+list\mbox{[}0\mbox{]}, E\+R0)
+\item 
+\hyperlink{namespaceDESKeygen_a4bbbb736b16854d40efe76c80b618630}{D\+E\+S\+Keygen.\+reduced\+\_\+value} = compression\+\_\+to\+\_\+32(func\+\_\+\+E\+R0\+K1)
+\item 
+\hyperlink{namespaceDESKeygen_ad42968adaf55c4fd51e9901eb3237696}{D\+E\+S\+Keygen.\+permuted\+\_\+reduced\+\_\+val} = get\+\_\+x\+\_\+bit\+\_\+permutation(reduced\+\_\+value, Reduced\+\_\+ka\+\_\+permutation)
+\item 
+\hyperlink{namespaceDESKeygen_aee7e8f986620f3eda7fca3cbdfc5b4d3}{D\+E\+S\+Keygen.\+R1} = perform\+\_\+xor(L0, permuted\+\_\+reduced\+\_\+val)
+\item 
+\hyperlink{namespaceDESKeygen_ad33c4097fff60ff4ff6a9ad24fc3d425}{D\+E\+S\+Keygen.\+final\+\_\+bit\+\_\+string} = L1+R1
+\item 
+\hyperlink{namespaceDESKeygen_a0b62d751252e5fe18e6f9b68ace70a5f}{D\+E\+S\+Keygen.\+final\+\_\+res} = hex(int(final\+\_\+bit\+\_\+string, 2))\mbox{[}2\+:\mbox{]}.upper()
+\end{DoxyCompactItemize}
